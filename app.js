@@ -63,4 +63,11 @@ function playRound(playerSelection, computerSelection) {
     }
 }//end playRound
 
-console.log(round(playerSelection, computerPlay()));
+function game() {
+    for(let i = 0; i < 5; i++) {
+        playRound();
+    }
+}
+
+
+
