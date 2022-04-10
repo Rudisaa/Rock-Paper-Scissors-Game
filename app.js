@@ -17,7 +17,7 @@ function computerPlay() {
     } else {
         return 'scissors';
     }
-}//endc computerPlay
+}//end computerPlay
 
 
 
@@ -31,35 +31,34 @@ function playRound(playerSelection, computerSelection) {
     //if player wins add 1 to playerWin counter
     //if player loses add 1 to computerWin counter
     //if tie don't add 1 to any counter
-    playerSelection.toLowerCase();
-    console.log(playerSelection);
+    console.log('You Choose ' + playerSelection + " and the Computer Selected " + computerSelection);
     if(playerSelection === 'rock') {
         if(computerSelection == 'paper') {
+            compWins++;
             return "Sorry you lose! Paper Beats Rock";
-          
         } else if(computerSelection == 'scissors') {
-            return "You Win! Rock beats Scissors!";
-          
+            playerWins++
+            return "You Win! Rock beats Scissors!"; 
         } else {
             return "It was a Tie!";
         }
     } else if(playerSelection == 'paper') {
         if(computerSelection == 'rock') {
+            playerWins++
             return "You Win! Paper Beats Rock";
-          
         } else if(computerSelection == 'paper') {
             return "It was a tie!";
         } else {
+            compWins++;
             return "You Lose! Scissor beats Paper!";
-          
         }
     } else if(playerSelection == 'scissors') {
         if( computerSelection == 'rock') {
-            return "You Lose! Rock beats Scissors!";
-    
+            compWins++;
+            return "You Lose! Rock beats Scissors!"; 
         } else if(computerSelection == 'paper') {
+            playerWins++;
             return "You Win! Scissors Beats Paper!";
-       
         } else {
             return "It was a tie!";
         }
@@ -69,11 +68,29 @@ function playRound(playerSelection, computerSelection) {
 
 }//end playRound
 
-function
+function game() {
+    
+    for(let i =0; i < 5; i++) {
+        let userInput = prompt("Please enter Rock, Paper, or Scissors");
+        let playerSelection = userInput.toLowerCase();
+        let computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+    }
+    console.log("Your Score is: " + playerWins + " The Computer's Score is: " + compWins);
+    if(compWins < playerWins) {
+        console.log("YOU WIN!!!")
+    } else if (compWins > playerWins) {
+        console.log("SORRY YOU LOST! BETTER TRY NEXT TIME.");
+    } else {
+        console.log("IT WAS A TIE!!");
+    }
+}
+
+game();
 
 
-let playerSelection = prompt("Please enter Rock, Paper, or Scissors");
-let computerSelection = computerPlay();
+
+
 
 
 
