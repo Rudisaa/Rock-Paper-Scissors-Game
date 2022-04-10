@@ -19,8 +19,9 @@ function computerPlay() {
     }
 }//endc computerPlay
 
-//
-const playerSelection = 'scissors';
+
+
+
 //function playRound - plays one round of the game rock-paper-scissors
 //@param playerSelection - the selection the user inputs
 //@param computerSelection - the object randomly returned from computerPlay function
@@ -30,44 +31,52 @@ function playRound(playerSelection, computerSelection) {
     //if player wins add 1 to playerWin counter
     //if player loses add 1 to computerWin counter
     //if tie don't add 1 to any counter
-    if(playerSelection == 'rock') {
+    playerSelection.toLowerCase();
+    console.log(playerSelection);
+    if(playerSelection === 'rock') {
         if(computerSelection == 'paper') {
-            console.log('Sorry you lose! Paper Beats Rock');
-            compWins++;
+            return "Sorry you lose! Paper Beats Rock";
+          
         } else if(computerSelection == 'scissors') {
-            console.log("You Win! Rock beats Scissors!");
-            playerWins++;
+            return "You Win! Rock beats Scissors!";
+          
         } else {
-            console.log("It was a Tie!");
+            return "It was a Tie!";
         }
     } else if(playerSelection == 'paper') {
         if(computerSelection == 'rock') {
-            console.log("You Win! Paper Beats Rock");
-            playerWins++;
+            return "You Win! Paper Beats Rock";
+          
         } else if(computerSelection == 'paper') {
-            console.log("It was a tie!");
+            return "It was a tie!";
         } else {
-            console.log("You Lose! Scissor beats Paper!");
-            compWins++;
+            return "You Lose! Scissor beats Paper!";
+          
         }
     } else if(playerSelection == 'scissors') {
         if( computerSelection == 'rock') {
-            console.log("You Lose! Rock beats Scissors!");
-            compWins++;
+            return "You Lose! Rock beats Scissors!";
+    
         } else if(computerSelection == 'paper') {
-            console.log("You Win! Scissors Beats Paper!");
-            playerWins++;
+            return "You Win! Scissors Beats Paper!";
+       
         } else {
-            console.log("It was a tie!");
+            return "It was a tie!";
         }
+    } else {
+        return "Please Enter A Valid Object."
     }
+
 }//end playRound
 
-function game() {
-    for(let i = 0; i < 5; i++) {
-        playRound();
-    }
-}
+function
+
+
+let playerSelection = prompt("Please enter Rock, Paper, or Scissors");
+let computerSelection = computerPlay();
+
+
+
 
 
 
