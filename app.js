@@ -68,14 +68,17 @@ function playRound(playerSelection, computerSelection) {
 
 }//end playRound
 
+//function game - loops through playrounds 5 times and prompts user to enter their object of choice 5 times
+//displays how many wins the player has and how many wins computer has
+//then displays who the winner is based on who has the most amount of wins
 function game() {
-    
+    //looping through 5 times 
     for(let i =0; i < 5; i++) {
         let userInput = prompt("Please enter Rock, Paper, or Scissors");
         let playerSelection = userInput.toLowerCase();
         let computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
-    }
+    }//end for
     console.log("Your Score is: " + playerWins + " The Computer's Score is: " + compWins);
     if(compWins < playerWins) {
         console.log("YOU WIN!!!")
@@ -84,8 +87,9 @@ function game() {
     } else {
         console.log("IT WAS A TIE!!");
     }
-}
+}//end game
 
+//running the game function
 game();
 
 
