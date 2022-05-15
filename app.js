@@ -1,15 +1,15 @@
 let playerScore = 0;
 let computerScore = 0;
+let roundCounter = 0;
 let computerOptions = ['rock', 'paper', 'scissors'];
 let playerOptions = "";
 
 let game = () => {  
-    user();
+    
 }
 
 
 let buttonClick = () => {
-    
     compareHand(playerOptions, computer());
 }
 
@@ -20,6 +20,7 @@ let user = (userHand) => {
     for(let i = 0; i < userSelection.length; i++) {
         userSelection[i].addEventListener('click', buttonClick);
         playerOptions = userHand;
+        roundCounter++;
     }
 }
 
@@ -39,11 +40,15 @@ let compareHand = (userHand, computerHand) => {
         case 'paperrock':
         case 'scissorspaper':
             console.log('winner');
+            userWin();
+            console.log(playerScore)
             break;
         case 'scissorsrock':
         case 'rockpaper':
         case 'papersissors':
             console.log('loser');
+            userLose();
+            console.log(computerScore);
             break;
         case 'rockrock':
         case 'paperpaper':
@@ -54,7 +59,20 @@ let compareHand = (userHand, computerHand) => {
 
 }
 
-game();
 
-//comparing both hands
+
+function userWin() {
+    const userScore = document.querySelector('.user-score');
+    playerScore++;
+    userScore.innerHTML = playerScore;
+
+}
+
+function userLose() {
+    const compScore = document.querySelector('.computer-score');
+    computerScore++;
+    compScore.innerHTML = computerScore;
+}
+
+game();
 
