@@ -53,7 +53,7 @@ let computer = () => {
 }
 //win function - add one to the user score
 function userWin() {
-    const userScoreboard = document.querySelector('.user-score');
+    const userScoreboard = document.querySelector('.user');
     userScore++;
     userScoreboard.textContent = userScore;
     roundCount++
@@ -61,7 +61,7 @@ function userWin() {
 //lose function - add one to the computer score
 
 function computerWin() {
-    const computerScoreBoard = document.querySelector('.computer-score');
+    const computerScoreBoard = document.querySelector('.computer');
     computerScore++;
     computerScoreBoard.textContent = computerScore;
     roundCount++;
