@@ -62,7 +62,7 @@ html, body {
 }
 
 
-.userselection {
+.game-button-container {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@ html, body {
     width: 100%;
 }
 
-.rock, .paper, .scissors {
+.userChoice {
     align-items: center;
     background-color: #D3D4D9;
     border: none;
