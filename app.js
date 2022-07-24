@@ -63,12 +63,15 @@ function userWin() {
 
 function computerWin() {
     const computerScoreBoard = document.querySelector('.computer-score');
-    computerScore++
+    computerScore++;
     computerScoreBoard.textContent = computerScore;
-    roundCount++
+    roundCount++;
 }
 
 //game function - once 5 rounds have been reached announce the winner
+function displayWinner() {
+    
+}
 
 
 //style function - adding animations depending on what hand the user and the computer has - even listener - transitionend
