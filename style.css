@@ -17,6 +17,17 @@ body {
     margin-bottom: 1em;
 }
 
+.game-scoreboard {
+    align-items: center;
+    display: flex;
+    height: 5em;
+    justify-content: center;
+}
+
+.user-score {
+    margin-right: 3em;
+}
+
 .game-display {
     align-content: center;
     display: flex;
