@@ -14,8 +14,8 @@ function startGame() {
 
 //function that sets the userChoice based on what button is clicked
 function userClick(e) {
-    if(e.target.matches('[data-userhand]')) {
-        compareSelections(e.target.dataset.userhand, computer());
+    if(e.target.matches('[data-choice]')) {
+        compareSelections(e.target.dataset.choice, computer());
         return;
     }
 }
