@@ -130,8 +130,10 @@ footer p{
 .github-svg {
     height: auto;
     width: 30px;
+    transition: transform .9s ease-in-out;
 }
 
 .github-svg:hover {
    fill: #BB0A21;
+   transform: rotate(360deg);
 }
