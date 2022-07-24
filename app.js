@@ -10,7 +10,6 @@ startGame();
 //event listener to see what type of hand was clicked
 function startGame() {
     document.addEventListener('click', userClick);
-    if 
 }
 
 //function that sets the userChoice based on what button is clicked
@@ -70,7 +69,7 @@ function computerWin() {
 
 //game function - once 5 rounds have been reached announce the winner
 function displayWinner() {
-    
+
 }
 
 
