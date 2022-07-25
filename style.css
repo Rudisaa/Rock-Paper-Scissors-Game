@@ -55,6 +55,12 @@ body {
     user-select: none;
 }
 
+.game-button:hover{
+    transition: all 0.6s ease;
+    transform: scale(1.35);
+    transform-origin: center;
+}
+
 .alert-container {
     align-items: center;
     background-color: #131313;
@@ -90,5 +96,27 @@ body {
 
 .hide {
     display: none;
+}
+
+.user-side {
+    align-items: center;
+    display: flex;
+    margin-right: 3em;
+    justify-content: center;
+}
+
+.computer-side {
+    align-items: center;
+    display: flex;
+    margin-left: 3em;
+    justify-content: center;
+}
+
+.user-rock, .user-paper, .user-scissors {
+    font-size: 10em;
+}
+
+.computer-rock, .computer-paper, .computer-scissors {
+    font-size: 10em;
 }
 
