@@ -93,8 +93,11 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    text-transform: uppercase;
     user-select: none;
 }
+
+
 
 .game-button:hover{
     transition: all 0.6s ease;
@@ -115,7 +118,7 @@ body {
     align-items: center;
     background-color: #21222D;
     border-radius: 1em;
-    color: white;
+    color: #FFFFFF;
     display: flex;
     height: 17em;
     pointer-events: none;
@@ -171,7 +174,7 @@ body {
 }
 
 .computer-rock, .computer-paper, .computer-scissors {
-    color: #D0D2d4;
+    color: #D0D2D4;
     font-size: 10em;
 }
 
