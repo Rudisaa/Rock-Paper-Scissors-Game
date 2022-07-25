@@ -29,6 +29,7 @@ function userClick(e) {
 //function to compare hands using switch statements, when comparing call a lose function or a win function
 function compareSelections(user, computer) {
     let comparison = user+computer;
+    
     handDisplay(user, computer);
     console.log(comparison);
     switch(comparison) {
@@ -37,17 +38,19 @@ function compareSelections(user, computer) {
         case 'scissrospaper':
             console.log('you win');
             userWin();
+            roundWinner('You won this round');
             break;
         case 'scissorsrock':
         case 'rockpaper':
         case 'paperscissors':
             console.log('loser');
             computerWin();
+            roundWinner('Sorry You Lost, The Computer Won');
             break;
         case 'rockrock':
         case 'paperpaper':
         case 'scissorsscissors':
-            console.log('tie');
+            roundWinner('It was a tie!');
             break;
     }
 
@@ -150,4 +153,11 @@ function handDisplay(user, computer) {
         computerRock.classList.add('hide');
         computerScissors.classList.remove('hide');
     }
+}
+
+//function for round winner 
+
+function roundWinner(message) {
+   const roundWinner = document.querySelector('.round-winner');
+   roundWinner.textContent = message;  
 }
