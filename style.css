@@ -6,6 +6,7 @@
 
 body {
     align-items: center;
+    background-color: #070618;
     display: flex;
     font-family: 'Poppins', sans-serif;
     flex-direction: column;
@@ -13,14 +14,22 @@ body {
     padding: 1em;
 }
 
+.game-container {
+    margin: auto 92vw;
+}
+
 .game-title {
+    color: #FECB56;
+    font-size: 3em; 
+    margin-bottom: .5em;
     text-align: center;
-    margin-bottom: 1em;
 }
 
 .game-scoreboard {
     align-items: center;
+    color: #FFFFFF;
     display: flex;
+    font-weight: 700;
     flex-direction: column;
     height: 5em;
     justify-content: center;
@@ -28,12 +37,13 @@ body {
 
 .round-winner {
     align-items: center;
+    color: #EBAF44;
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-.user-score {
+.scores {
     align-items: center;
     display: flex;
     margin-top: 1em;
@@ -42,7 +52,15 @@ body {
 }
 
 .user {
+    align-items: center;
+    display: flex;
     margin-right: 2em;
+    margin-left: .25em;
+    justify-content: center;
+}
+
+.computer {
+    margin-left: .25em;
 }
 
 .game-display {
@@ -51,7 +69,7 @@ body {
     height: 25em;
     justify-content: center;
     width: auto;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
 }
 
 .game-selection {
@@ -64,7 +82,8 @@ body {
 
 .game-button {
     align-content: center;
-    background-color: #131313;
+    background-color: #D90971;
+    border: none;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -74,7 +93,7 @@ body {
 
 .game-button:hover{
     transition: all 0.6s ease;
-    transform: scale(1.35);
+    transform: scale(1.1);
     transform-origin: center;
 }
 
@@ -130,6 +149,7 @@ body {
 }
 
 .user-rock, .user-paper, .user-scissors {
+    color: #D0D2d4;
     font-size: 10em;
 }
 
@@ -138,6 +158,7 @@ body {
 }
 
 .computer-rock, .computer-paper, .computer-scissors {
+    color: #D0D2d4;
     font-size: 10em;
 }
 
