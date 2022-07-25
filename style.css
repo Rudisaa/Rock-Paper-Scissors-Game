@@ -54,3 +54,21 @@ body {
     text-align: center;
     user-select: none;
 }
+
+.alert-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.alert {
+    align-items: center;
+    color: white;
+    display: flex;
+    background-color: #131313;
+    height: 15em;
+    pointer-events: none;
+    justify-content: center;
+    width: 20em;
+}
+
