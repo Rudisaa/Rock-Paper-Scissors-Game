@@ -51,6 +51,7 @@ function compareSelections(user, computer) {
 
     if(roundCount === MAX_ROUNDS) {
         displayWinner();
+        stopGame();
     }
 }
 
@@ -82,18 +83,24 @@ function computerWin() {
 function displayWinner() {
     const alertContainer = document.querySelector('.alert-container');
     const alert = document.createElement('div');
+    const playAgainButton = document.createElement('div');
+    playAgainButton.textContent = 'Play Again!';
     alert.classList.add('alert');
+    playAgainButton.classList.add('play-again')
 
 
     if(userScore > computerScore) {
         alert.textContent = 'You won!';
         alertContainer.prepend(alert);
+        alertContainer.prepend(playAgainButton);
     } else if(userScore < computerScore) {
         alert.textContent = 'The Computer Won!'
         alertContainer.prepend(alert);
+        alertContainer.prepend(playAgainButton);
     } else {
         alert.textContent = 'It was a tie!'
         alertContainer.prepend(alert);
+        alertContainer.prepend(playAgainButton);
     }
 }
 
