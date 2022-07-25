@@ -35,10 +35,9 @@ function compareSelections(user, computer) {
     switch(comparison) {
         case 'rockscissors':
         case 'paperrock':
-        case 'scissrospaper':
-            console.log('you win');
+        case 'scissorspaper':
             userWin();
-            roundWinner('You won this round');
+            roundWinner('Congratulations, you won this round!');
             break;
         case 'scissorsrock':
         case 'rockpaper':
@@ -72,7 +71,7 @@ function userWin() {
 
     userScore++;
     userScoreboard.textContent = userScore;
-    alert.textContent = 'You Won!'
+    alert.textContent = 'Congratulations, You Won!'
     roundCount++
 }
 //lose function - add one to the computer score
@@ -98,7 +97,7 @@ function displayWinner() {
         playAgainButton.classList.remove('hide');
         
     } else if(userScore < computerScore) {
-        alert.textContent = 'The Computer Won!'
+        alert.textContent = 'Sorry you lost, The Computer Won!'
         alertContainer.prepend(alert);
         playAgainButton.classList.remove('hide');
 
