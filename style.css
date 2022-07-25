@@ -85,5 +85,10 @@ body {
     width: 5em;
     margin-top: 5em;
     text-align: center;
+    user-select: none;
+}
+
+.play-again.hide {
+    display: none;
 }
 
