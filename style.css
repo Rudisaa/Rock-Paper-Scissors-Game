@@ -7,6 +7,7 @@
 body {
     align-items: center;
     display: flex;
+    font-family: 'Poppins', sans-serif;
     flex-direction: column;
     justify-content: center;
     padding: 1em;
@@ -20,12 +21,28 @@ body {
 .game-scoreboard {
     align-items: center;
     display: flex;
+    flex-direction: column;
     height: 5em;
     justify-content: center;
 }
 
+.round-winner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .user-score {
-    margin-right: 3em;
+    align-items: center;
+    display: flex;
+    margin-top: 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+.user {
+    margin-right: 2em;
 }
 
 .game-display {
@@ -114,6 +131,10 @@ body {
 
 .user-rock, .user-paper, .user-scissors {
     font-size: 10em;
+}
+
+.user-scissors {
+    transform: scaleX(-1);
 }
 
 .computer-rock, .computer-paper, .computer-scissors {
