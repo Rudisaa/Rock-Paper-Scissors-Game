@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0b6206074f.js" crossorigin="anonymous"></script>
     <title>Rock-Paper-Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,15 +19,25 @@
             <div class="computer-score">Computer Score: <span class="computer">0</span></div>
         </div>
         <div class="alert-container">
-            <button class="play-again hide" data-play-again>Play Again!</button>
+            <button class="play-again hide">Play Again!</button>
         </div>
         <div class="game-display">
             <!-- this is where the choices that the user selected and that the computer choose will be displayed -->
+            <div class="user-side">
+                <i class="fa-solid fa-hand-back-fist hide user-rock"></i>
+                <i class="fa-solid fa-hand hide user-paper"></i>   
+                <i class="fa-solid fa-hand-scissors hide user-scissors"></i>   
+            </div>
+            <div class="computer-side">
+                <i class="fa-solid fa-hand-back-fist hide computer-rock"></i>
+                <i class="fa-solid fa-hand hide computer-paper"></i>   
+                <i class="fa-solid fa-hand-scissors hide computer-scissors"></i>         
+            </div>
         </div>
         <div class="game-selection">
-            <div class="game-button" data-choice="rock">rock</div>
-            <div class="game-button" data-choice="paper">paper</div>
-            <div class="game-button" data-choice="scissors">scissors</div>
+            <button class="game-button" data-choice="rock">rock</button>
+            <button class="game-button" data-choice="paper">paper</button>
+            <button class="game-button" data-choice="scissors">scissors</button>
         </div>
     </div>
     <script src="app.js"></script>
