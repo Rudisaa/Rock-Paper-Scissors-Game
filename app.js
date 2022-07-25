@@ -23,7 +23,12 @@ function userClick(e) {
         compareSelections(e.target.dataset.choice, computer());
         return;
     }
-}
+
+    if(e.target.matches('[data-play-again]')) {
+        resestGame();
+        return;
+    }
+ }
 
 //function to compare hands using switch statements, when comparing call a lose function or a win function
 function compareSelections(user, computer) {
@@ -83,27 +88,32 @@ function computerWin() {
 function displayWinner() {
     const alertContainer = document.querySelector('.alert-container');
     const alert = document.createElement('div');
-    const playAgainButton = document.createElement('div');
-    playAgainButton.textContent = 'Play Again!';
+    const playAgainButton = document.querySelector('.play-again');
     alert.classList.add('alert');
-    playAgainButton.classList.add('play-again')
 
 
     if(userScore > computerScore) {
         alert.textContent = 'You won!';
         alertContainer.prepend(alert);
-        alertContainer.prepend(playAgainButton);
+        playAgainButton.classList.remove('hide');
+        
     } else if(userScore < computerScore) {
         alert.textContent = 'The Computer Won!'
         alertContainer.prepend(alert);
-        alertContainer.prepend(playAgainButton);
+
     } else {
         alert.textContent = 'It was a tie!'
         alertContainer.prepend(alert);
-        alertContainer.prepend(playAgainButton);
     }
 }
 
+//reset game function 
+function resestGame() {
+    userScore = 0;
+    computerScore = 0;
+    roundCount = 0;
+    startGame();
+}
 
 //style function - adding animations depending on what hand the user and the computer has - even listener - transitionend
 
