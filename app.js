@@ -4,7 +4,7 @@ let computerScore = 0;
 let roundCount = 0;
 let computerOptions = ['rock', 'paper', 'scissors'];
 const playAgainButton = document.querySelector('.play-again');
-const MAX_ROUNDS = 5;
+const GAME_WINNER = 5;
 
 startGame();
 
@@ -53,7 +53,7 @@ function compareSelections(user, computer) {
             break;
     }
 
-    if(roundCount === MAX_ROUNDS) {
+    if(userScore === GAME_WINNER || computerScore === GAME_WINNER) {
         displayWinner();
         stopGame();
     }
@@ -92,7 +92,7 @@ function displayWinner() {
 
 
     if(userScore > computerScore) {
-        alert.textContent = 'You won!';
+        alert.textContent = 'congratulations, You won the game!';
         alertContainer.prepend(alert);
         playAgainButton.classList.remove('hide');
         
