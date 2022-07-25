@@ -3,6 +3,7 @@ let userScore = 0;
 let computerScore = 0;
 let roundCount = 0;
 let computerOptions = ['rock', 'paper', 'scissors'];
+const MAX_ROUNDS = 5;
 
 startGame();
 
@@ -10,6 +11,10 @@ startGame();
 //event listener to see what type of hand was clicked
 function startGame() {
     document.addEventListener('click', userClick);
+}
+
+function stopGame() {
+    document.removeEventListener('click', userClick);
 }
 
 //function that sets the userChoice based on what button is clicked
@@ -22,7 +27,6 @@ function userClick(e) {
 
 //function to compare hands using switch statements, when comparing call a lose function or a win function
 function compareSelections(user, computer) {
- 
     let comparison = user+computer;
     console.log(comparison);
     switch(comparison) {
@@ -44,6 +48,10 @@ function compareSelections(user, computer) {
             console.log('tie');
             break;
     }
+
+    if(roundCount === MAX_ROUNDS) {
+        displayWinner();
+    }
 }
 
 let computer = () => {
@@ -54,8 +62,11 @@ let computer = () => {
 //win function - add one to the user score
 function userWin() {
     const userScoreboard = document.querySelector('.user');
+    const alert = document.createElement('div');
+
     userScore++;
     userScoreboard.textContent = userScore;
+    alert.textContent = 'You Won!'
     roundCount++
 }
 //lose function - add one to the computer score
@@ -69,7 +80,21 @@ function computerWin() {
 
 //game function - once 5 rounds have been reached announce the winner
 function displayWinner() {
+    const alertContainer = document.querySelector('.alert-container');
+    const alert = document.createElement('div');
+    alert.classList.add('alert');
 
+
+    if(userScore > computerScore) {
+        alert.textContent = 'You won!';
+        alertContainer.prepend(alert);
+    } else if(userScore < computerScore) {
+        alert.textContent = 'The Computer Won!'
+        alertContainer.prepend(alert);
+    } else {
+        alert.textContent = 'It was a tie!'
+        alertContainer.prepend(alert);
+    }
 }
 
 
