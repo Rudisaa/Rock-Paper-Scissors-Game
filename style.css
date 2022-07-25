@@ -6,7 +6,7 @@
 
 body {
     align-items: center;
-    background-color: #070618;
+    background-color: #171821;
     display: flex;
     font-family: 'Poppins', sans-serif;
     flex-direction: column;
@@ -19,7 +19,7 @@ body {
 }
 
 .game-title {
-    color: #FECB56;
+    color: #EE786B;
     font-size: 3em; 
     margin-bottom: .5em;
     text-align: center;
@@ -37,10 +37,11 @@ body {
 
 .round-winner {
     align-items: center;
-    color: #EBAF44;
+    color: #FEB95A;
     display: flex;
     justify-content: center;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .scores {
@@ -66,26 +67,30 @@ body {
 .game-display {
     align-content: center;
     display: flex;
-    height: 25em;
+    height: 20em;
     justify-content: center;
     width: auto;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .game-selection {
     display: grid;
-    grid-template-columns: repeat(3, 10em);
-    grid-auto-rows: 5em;
+    grid-template-columns: repeat(3, 15em);
+    grid-auto-rows: 10em;
     gap: 2em;
+    justify-content: center;
 }
 
 
 .game-button {
-    align-content: center;
-    background-color: #D90971;
+    align-items: center;
+    background-color: #21222D;
     border: none;
+    border-radius: .5em;
     color: #FFFFFF;
     display: flex;
+    font-size: 1.5em;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     user-select: none;
@@ -99,35 +104,42 @@ body {
 
 .alert-container {
     align-items: center;
-    background-color: #131313;
     display: flex;
     flex-direction: column;
     position: fixed;
     justify-content: center;
-    transform: translateX(35%);
+    transform: translateX(50%);
 }
 
 .alert {
     align-items: center;
+    background-color: #21222D;
+    border-radius: 1em;
     color: white;
     display: flex;
-    height: 15em;
+    height: 17em;
     pointer-events: none;
     justify-content: center;
-    width: 20em;
+    text-transform: uppercase;
+    width: 25em;
 }
 
 .play-again {
     align-items: center;
     background-color: #FFFFFF;
+    border: none;
     border-radius: .25em;
     display: flex;
-    height: 1.5em;
+    height: 3em;
     justify-content: center;
-    width: 5em;
-    margin-top: 5em;
+    width: 10em;
     text-align: center;
     user-select: none;
+    transform: translateY(-6em);
+}
+
+.play-again:hover {
+    background-color: #ABE0D9;
 }
 
 .hide {
@@ -155,6 +167,7 @@ body {
 
 .user-scissors {
     transform: scaleX(-1);
+    z-index: -1;
 }
 
 .computer-rock, .computer-paper, .computer-scissors {
